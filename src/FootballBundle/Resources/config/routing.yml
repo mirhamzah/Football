@@ -1,0 +1,8 @@
+football_team:
+    resource: "@FootballBundle/Resources/config/routing/team.yml"
+    prefix:   /api/team
+
+football_league:
+    resource: "@FootballBundle/Resources/config/routing/league.yml"
+    prefix:   /api/league
+

@@ -1,0 +1,26 @@
+FootballBundle\Entity\Team:
+    type: entity
+    table: teams
+    repositoryClass: FootballBundle\Repository\TeamRepository
+
+    manyToOne:
+        league:
+            targetEntity: Team
+            inversedBy: teams
+            joinColumn:
+                name: league
+                referencedColumnName: id
+                nullable: true
+                onDelete: 'SET NULL'
+                
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

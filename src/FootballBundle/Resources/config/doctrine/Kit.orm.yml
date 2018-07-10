@@ -1,0 +1,29 @@
+FootballBundle\Entity\Kit:
+    type: entity
+    table: kits
+    repositoryClass: FootballBundle\Repository\KitRepository
+
+    oneToOne:
+        team:
+            targetEntity: Team
+            joinColumn: 
+                name: team
+                referencedColumnName: id
+                onDelete: 'CASCADE'
+
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        shirtColor:
+            type: string
+            length: '10'
+            column: shirt_color
+        shortsColor:
+            type: string
+            length: '10'
+            column: shorts_color
+    lifecycleCallbacks: {  }

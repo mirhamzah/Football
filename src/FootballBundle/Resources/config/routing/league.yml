@@ -1,0 +1,24 @@
+league_index:
+    path:     /
+    defaults: { _controller: "FootballBundle:League:index" }
+    methods:  GET
+
+league_show:
+    path:     /{id}/show
+    defaults: { _controller: "FootballBundle:League:show" }
+    methods:  GET
+
+league_new:
+    path:     /new
+    defaults: { _controller: "FootballBundle:League:new" }
+    methods:  POST
+
+league_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FootballBundle:League:edit" }
+    methods:  POST
+
+league_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FootballBundle:League:delete" }
+    methods:  DELETE
