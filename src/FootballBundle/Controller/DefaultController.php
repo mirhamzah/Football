@@ -11,9 +11,6 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
-    {
-    }
 
     public function JsonResponse($entity, $status=200)
     {
